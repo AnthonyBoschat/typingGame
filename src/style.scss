@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.949) ;
+    font-family: monospace;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 40% 30%;
+    color: white;
+    // font-weight: 700;
+    font-size: 2rem;
+}
+
+
+h2{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 600;
+}
+h3{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.trash-container{
+    
+    width: 100%;
+    // background-color: green;
+    
+    font-size: 1rem;
+    letter-spacing: 1px;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    font-weight: 700;
+    span{
+        display: inline-block;
+        height: auto;
+    }
+    .green{
+        color: rgb(172, 228, 172);
+    }
+    .red{
+        color: rgb(253, 114, 114);
+    }
+}
+
+.green{
+    color: rgb(172, 228, 172);
+}
+.red{
+    color: rgb(253, 114, 114);
+}
+
+.words-container{
+    
+    height: 100%;
+    letter-spacing: 1px;
+    display: flex;
+    // flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    .words{
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+    }
+    
+    .word{
+        transition: opacity 0.15s linear;
+        opacity: 0.4;
+        &.active{
+            opacity: 1;
+        }
+
+        .letter{
+            transition: all 0.1s linear;
+            opacity: 0.4;
+            &.waiting{
+                // font-size: 2.5rem;
+                opacity: 1;
+            }
+            // color: rgb(61, 180, 61);
+        }
+    }
+}
+
+.button-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 1rem;
+
+    p{
+        font-size: 1rem;
+    }
+    
+    button{
+        all:unset;
+        font-size: 1.2rem;
+        width: fit-content;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+div.option{
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    label{
+        font-size: 1rem;
+    }
+    >div{
+        display: flex;
+        gap: 1rem;
+        font-size: 1.5rem;
+        select{
+            background-color: transparent;
+            color: white;
+            border: none;
+
+            option{
+                background-color: rgb(56, 56, 56);
+                color: white;
+            }
+        }
+    }
+}
